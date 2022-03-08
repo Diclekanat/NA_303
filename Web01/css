@@ -1,0 +1,60 @@
+        /* */
+        /* Tüm anasayfa-li class ı taşıyanlara uygula */
+        .anasayfa-li
+        {
+            float: left;
+            margin-right: 5px;
+            background-color: rgb(201, 116, 250);
+            padding: 4px;
+            border-radius: 6px;
+        }
+        /*  Main elementine uygyula. */
+        main {
+
+            background-color:rgb(218, 146, 218) ;
+            padding: 1rem;
+        }
+        /*Aşağıdaki css hem ul hem ol için geçerlidir. */
+        ul,ol {
+            list-style-type: none;
+        }
+        
+        section
+        {
+            background-color:rgb(142, 255, 166) ;display: inline;
+        }
+
+        /* id si section2 olanlara uygula */
+        /* #section2 */
+
+        /* id si section2 olan section a uygula */
+        section#section2
+        {
+             background-color:rgb(112, 215, 247) ;
+        }
+
+        /* kutu ve bolum sınıflarını içeren elementlere uygula*/
+        .kutu.bolum
+        {
+            background-color: aquamarine;
+        }
+
+        /* kutu classının içindeki bolum classlı içeren elemente uygula*/
+        .kutu .kutu.bolum
+        {
+            background-color: rgb(110, 129, 240);
+        }
+        .kutu 
+        {
+            border: 2px solid darkorchid;
+        }
+        .bolum 
+        {
+            border: 3px dashed rgb(101, 207, 69);
+        }
+
+        li:nth-child(3)
+        {
+            height: 25px;
+            border-radius: 50%;
+        }

@@ -1,0 +1,25 @@
+@media screen and (max-width:800px) {
+
+    #middle-left
+    {
+        display: none;  /*Hepsi silinsin */
+    }
+    #middle-right
+    {
+        display: none;  /*Hepsi silinsin */
+        width: 90% !important;
+    }
+    #nav 
+    {
+        height: unset !important;
+    }
+    div#menu ul
+    {
+        
+    }
+
+    div#menu li
+    {
+
+    }
+}

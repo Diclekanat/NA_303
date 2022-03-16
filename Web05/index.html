@@ -1,107 +1,74 @@
-https://github.com/Project103N
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/4602062?v=4">
-    <title>JS 01</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>HTML Manipulation with JS</title>
 </head>
 <body>
-    <p>Hello JS!</p>
+    <main class="container bg-info p-2" style="min-height: 200px;">
+        <div id="ust" class="bg-warning p-2"></div>
+        <div id="orta" class="bg-secondary p-2">Burası orta Div</div>
+        <div id="alt" class="bg-light p-2">
+            <a class="link" href="//https://networkakademi.net">100% Bonus kazandınız.Tıklayınız!</a><br>     
+            <a class="link" href="//https://networkakademi.net">100% Bonus kazandınız.Tıklayınız!</a><br>
+            <a class="link" href="//https://networkakademi.net">100% Bonus kazandınız.Tıklayınız!</a>
+        </div><br>
+        <div>
+            <footer class="row bg-dark p-5 m-0" style="color: wheat;">
+            <form>
+                <a id="changeTheme" class="btn btn-primary">TIKLA</a>
+            </form>
+            </footer>
+        </div>
+
+    </main>
+
     <script>
-        /*
-            Çoklu
-            yorum
-            satırı
-        */
-       // tek satır yorum
+        //id seçici
+        let ustDiv=document.getElementById("ust");
+        console.log(ustDiv);
 
-        var sayi = 5;  // 1 den fazla kez tanımlanabilir.
-        var sayi = 10;
+        //html değiştirme
+        ustDiv.innerHTML="<h4>Merhaba JS</h4>";
+        //ustDiv.innerText="<h4>Merhaba JS</h4>";
 
-        let sayi2 = 5; // 1 defa tanımlanabilir.
-        sayi2 = 10;
-        console.log(sayi2);
+        //css özelliği ekleme
+        ustDiv.style="color:red; font-weight:bold;";
 
-        const pi = 3.14; // Sabit veri
-        // pi = 3; // hata verir!
+        //querySelector seçici
+        let ortaDiv=document.querySelector("div#orta");
+        console.log(ortaDiv);
 
+        ortaDiv.innerHTML+="<br><h4 style='color:#fff'>JS ile eklendi!</h4>";
 
-        // alert("Merhabalar");
+        //querySelectorAll seçici
+        let linkler=document.querySelectorAll("a.link");
 
-        ///////////////////////
-        //    VERİ TİPLERİ   //
-        ///////////////////////
-
-        // Number: tam ve ondalıklı sayılar + - 2 üssü 53
-        // BigInt: Number'dan daha büyük sayılar için.
-        // String
-        // Boolean
-        // null
-        // Object
-
-        //////////////////////////
-        //    Tip Dönüşümleri   //
-        //////////////////////////
-
-        let variable = "125";
-        console.log(typeof variable);
-        console.log(typeof alert);
-        console.log(typeof 7);
-        console.log(typeof Math);
-        console.log(typeof true);
-
-        var sayi = Number("145");
-        var mesaj = "sayi değişkeninin veri tipi: "+typeof sayi;
-        console.log(mesaj);
-
-        console.log(typeof String(145));
-        console.log(Boolean("NA303"));
-        console.log(Boolean(""));
-        console.log(typeof Boolean("789"));
-
-        // JSON Okuma ! => String to Object
-        var strVeri = '{"name":"Ahmet","surname":"Çelik"}';
-        console.log(typeof strVeri);
-        
-        let objVeri = JSON.parse(strVeri);
-        console.log(objVeri);
-        console.log(objVeri.name);
-        console.log(objVeri.surname);
-
-        // Stringify => Object to String
-        let objPerson = {
-            name:"Mahmut",
-            surname:"Şeker",
-            address: {city:"Sivas",town:"Suşehri"}
-        };
-
-        // university.mongodb.com
-
-        console.log(objPerson.name);
-        console.log(objPerson.surname);
-        console.log(objPerson.address.city);
-        console.log(objPerson.address.town);
-        // Burada nesne tanımladık.
-
-        console.log(typeof objPerson);
-        let strPerson = JSON.stringify(objPerson);
-        console.log(strPerson);
-        console.log(typeof strPerson);
+        //console.log(typeof linkler);
+        //console.log(linkler);
+        linkler.forEach(link=>{
+            link.style="text-decoration:none; color:black;";
+        });
 
 
-        //////////////////////////
-        // MANTIKSAL OPERATÖRLER//
-        //////////////////////////
-
-
+        //
+        let linklerr=document.getElementsByClassName('link');
+        console.log(linklerr);
+        console.log(typeof linklerr);
+        for(let index=0;index<linklerr.length;index++){
+            linklerr[index].style="text-decoration:none;color:black;";
+        }
+        let altDiv = document.getElementById('alt');
+        console.log(altDiv);
 
 
     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 </html>
